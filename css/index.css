@@ -1366,6 +1366,16 @@ body.light-mode {
     }
 }
 
+/* Mobile menu text color fix for light mode */
+@media screen and (max-width: 768px) {
+    body:not(.dark-mode) .navbar-links {
+        color: white;
+    }
+    body:not(.dark-mode) .navbar-links a {
+        color: white;
+    }
+}
+
 /* Smaller Mobile Devices */
 @media (max-width: 480px) {
     .hero-content h2 {
