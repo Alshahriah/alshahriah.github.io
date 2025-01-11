@@ -63,24 +63,39 @@ class NavigationManager {
     }
 
     setupMobileMenu() {
-        elements.menuToggle.addEventListener('click', () => {
-            this.isMenuOpen = !this.isMenuOpen;
-            elements.navLinks.classList.toggle('active');
-            elements.menuToggle.classList.toggle('active');
-            document.body.style.overflow = this.isMenuOpen ? 'hidden' : '';
+        elements.menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.toggleMenu();
         });
 
-        // Close menu when clicking a link
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (this.isMenuOpen && 
+                !elements.navLinks.contains(e.target) && 
+                !elements.menuToggle.contains(e.target)) {
+                this.toggleMenu();
+            }
+        });
+
+        // Close menu on link click
         elements.navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 if (this.isMenuOpen) {
-                    this.isMenuOpen = false;
-                    elements.navLinks.classList.remove('active');
-                    elements.menuToggle.classList.remove('active');
-                    document.body.style.overflow = '';
+                    this.toggleMenu();
                 }
             });
         });
+    }
+
+    toggleMenu() {
+        this.isMenuOpen = !this.isMenuOpen;
+        elements.navLinks.classList.toggle('active');
+        elements.menuToggle.classList.toggle('active');
+        
+        const icon = elements.menuToggle.querySelector('i');
+        icon.className = this.isMenuOpen ? 'fas fa-times nav-icon' : 'fas fa-bars nav-icon';
+        
+        document.body.style.overflow = this.isMenuOpen ? 'hidden' : '';
     }
 
     setupSmoothScroll() {

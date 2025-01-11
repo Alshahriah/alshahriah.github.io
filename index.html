@@ -90,10 +90,11 @@
                 </ul>
             </div>
             <div class="nav-right">
-                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-                    <i class="fas fa-sun nav-icon" id="theme-icon"></i>
+                <button id="theme-toggle" class="nav-button theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun nav-icon"></i>
+                    <i class="fas fa-moon nav-icon"></i>
                 </button>
-                <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+                <button id="menu-toggle" class="nav-button menu-toggle" aria-label="Toggle menu">
                     <i class="fas fa-bars nav-icon"></i>
                 </button>
             </div>
@@ -160,21 +161,21 @@
                 <div class="projects-grid">
                     <article class="project">
                         <div class="project-image">
-                            <img src="https://picsum.photos/400/300" alt="Project 1" loading="lazy">
+                            <img src="/images/sales-dev.jpg" alt="Sales Development Application" loading="lazy">
                         </div>
                         <div class="project-info">
-                            <h3>Project Alpha</h3>
-                            <p>A modern web application built with React and Node.js</p>
+                            <h3>Sales Development Platform</h3>
+                            <p>A comprehensive sales management and analytics platform built with Python and React</p>
                             <div class="project-tech">
+                                <span><i class="fab fa-python"></i> Python</span>
                                 <span><i class="fab fa-react"></i> React</span>
-                                <span><i class="fab fa-node-js"></i> Node.js</span>
-                                <span><i class="fas fa-database"></i> MongoDB</span>
+                                <span><i class="fas fa-database"></i> PostgreSQL</span>
                             </div>
                             <div class="project-links">
-                                <a href="#" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                                <a href="https://sales-dev.example.com" class="btn-primary" target="_blank" rel="noopener noreferrer">
                                     <i class="fas fa-external-link-alt"></i> Live Demo
                                 </a>
-                                <a href="#" class="btn-secondary" target="_blank" rel="noopener noreferrer">
+                                <a href="https://github.com/yourusername/sales-dev" class="btn-secondary" target="_blank" rel="noopener noreferrer">
                                     <i class="fab fa-github"></i> Source Code
                                 </a>
                             </div>
@@ -182,21 +183,21 @@
                     </article>
                     <article class="project">
                         <div class="project-image">
-                            <img src="https://picsum.photos/400/300" alt="Project 1" loading="lazy">
+                            <img src="/images/url-shortener.jpg" alt="URL Shortener Service" loading="lazy">
                         </div>
                         <div class="project-info">
-                            <h3>Project Alpha</h3>
-                            <p>A modern web application built with React and Node.js</p>
+                            <h3>URL Shortener Service</h3>
+                            <p>High-performance URL shortening service with analytics, built with Python and Redis</p>
                             <div class="project-tech">
-                                <span><i class="fab fa-react"></i> React</span>
-                                <span><i class="fab fa-node-js"></i> Node.js</span>
-                                <span><i class="fas fa-database"></i> MongoDB</span>
+                                <span><i class="fab fa-python"></i> Python</span>
+                                <span><i class="fas fa-server"></i> FastAPI</span>
+                                <span><i class="fas fa-database"></i> Redis</span>
                             </div>
                             <div class="project-links">
-                                <a href="#" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                                <a href="https://url-shortener.example.com" class="btn-primary" target="_blank" rel="noopener noreferrer">
                                     <i class="fas fa-external-link-alt"></i> Live Demo
                                 </a>
-                                <a href="#" class="btn-secondary" target="_blank" rel="noopener noreferrer">
+                                <a href="https://github.com/yourusername/url-shortener" class="btn-secondary" target="_blank" rel="noopener noreferrer">
                                     <i class="fab fa-github"></i> Source Code
                                 </a>
                             </div>
@@ -204,27 +205,26 @@
                     </article>
                     <article class="project">
                         <div class="project-image">
-                            <img src="https://picsum.photos/400/300" alt="Project 1" loading="lazy">
+                            <img src="/images/data-analytics.jpg" alt="Data Analytics Dashboard" loading="lazy">
                         </div>
                         <div class="project-info">
-                            <h3>Project Alpha</h3>
-                            <p>A modern web application built with React and Node.js</p>
+                            <h3>Data Analytics Dashboard</h3>
+                            <p>Real-time data visualization platform using Python and D3.js</p>
                             <div class="project-tech">
-                                <span><i class="fab fa-react"></i> React</span>
-                                <span><i class="fab fa-node-js"></i> Node.js</span>
-                                <span><i class="fas fa-database"></i> MongoDB</span>
+                                <span><i class="fab fa-python"></i> Python</span>
+                                <span><i class="fab fa-js"></i> D3.js</span>
+                                <span><i class="fas fa-chart-line"></i> Pandas</span>
                             </div>
                             <div class="project-links">
-                                <a href="#" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                                <a href="https://analytics.example.com" class="btn-primary" target="_blank" rel="noopener noreferrer">
                                     <i class="fas fa-external-link-alt"></i> Live Demo
                                 </a>
-                                <a href="#" class="btn-secondary" target="_blank" rel="noopener noreferrer">
+                                <a href="https://github.com/yourusername/analytics-dashboard" class="btn-secondary" target="_blank" rel="noopener noreferrer">
                                     <i class="fab fa-github"></i> Source Code
                                 </a>
                             </div>
                         </div>
                     </article>
-                    <!-- Add more project articles as needed -->
                 </div>
             </div>
         </section>
@@ -278,6 +278,24 @@
                                     <div class="progress" style="width: 75%"></div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Programming Languages</h3>
+                        <div class="skill-bars">
+                            <div class="skill-bar">
+                                <p data-value="95%">Python</p>
+                                <div class="bar">
+                                    <div class="progress" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <p data-value="85%">JavaScript</p>
+                                <div class="bar">
+                                    <div class="progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <!-- ...other skills... -->
                         </div>
                     </div>
                 </div>
